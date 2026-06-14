@@ -26,6 +26,7 @@ export function Layout({ children, lastUpdatedText, platformCount }: LayoutProps
       <footer className="footer">
         <p>本项目仅用于学习与演示，不构成任何官方榜单或商业用途。</p>
         <p>数据来源于 Uapis 公开接口，页面展示内容仅作聚合整理参考。</p>
+        <p>数据更新频率约 10 分钟。</p>
       </footer>
     </div>
   )

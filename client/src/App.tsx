@@ -4,10 +4,11 @@ import { fetchAllTrend } from './api/fetchAllTrend'
 import { HotSummary } from './components/HotSummary'
 import { Layout } from './components/Layout'
 import { TrendCard } from './components/TrendCard'
-import type { HotPlatform } from './types/hot'
+import type { CrossPlatformItem, HotPlatform } from './types/hot'
 
 function App() {
   const [platforms, setPlatforms] = useState<HotPlatform[]>([])
+  const [crossPlatform, setCrossPlatform] = useState<CrossPlatformItem[]>([])
   const [isLoading, setIsLoading] = useState(true)
   const [pageError, setPageError] = useState<string | null>(null)
 
@@ -18,6 +19,7 @@ function App() {
     try {
       const data = await fetchAllTrend()
       setPlatforms(data.platforms)
+      setCrossPlatform(data.crossPlatform || [])
     } catch (error) {
       const message = error instanceof Error ? error.message : '未知错误'
       setPageError(`页面加载失败：${message}`)
@@ -77,7 +79,7 @@ function App() {
 
       {!isLoading && platforms.length > 0 ? (
         <>
-          <HotSummary platforms={platforms} />
+          <HotSummary crossPlatform={crossPlatform} />
 
           <section className="trend-grid">
             {platforms.map((platform) => (

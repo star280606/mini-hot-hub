@@ -176,6 +176,30 @@
   font-size: 0.85rem;
 }
 
+.heat-badge {
+  background: linear-gradient(135deg, #fef3c7, #fde68a) !important;
+  color: #92400e !important;
+  font-weight: 600;
+}
+
+.view-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #fce7f3, #fbcfe8);
+  color: #be185d;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.view-link:hover {
+  opacity: 0.8;
+}
+
 .trend-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));

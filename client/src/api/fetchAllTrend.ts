@@ -11,7 +11,8 @@ export async function fetchAllTrend(): Promise<HotAllResponse> {
       throw new Error(`请求失败: ${res.status}`)
     }
 
-    return (await res.json()) as HotAllResponse
+    const data = (await res.json()) as HotAllResponse
+    return data
   } catch (error) {
     console.warn('后端接口不可用，已降级为本地 Mock 数据', error)
     return mockHotData as HotAllResponse

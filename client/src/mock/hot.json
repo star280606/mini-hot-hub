@@ -4,7 +4,7 @@
       "source": "xhs",
       "sourceName": "小红书",
       "listName": "种草趋势榜",
-      "updatedAt": "2026-06-13T08:00:00.000Z",
+      "updatedAt": "2026-06-14T08:00:00.000Z",
       "items": [
         { "rank": 1, "title": "早秋美拉德穿搭", "heat": "45w", "url": "https://www.xiaohongshu.com/search_result?keyword=%E6%97%A9%E7%A7%8B%E7%BE%8E%E6%8B%89%E5%BE%B7%E7%A9%BF%E6%90%AD" },
         { "rank": 2, "title": "氛围感胶片拍照", "heat": "38w", "url": "https://www.xiaohongshu.com/search_result?keyword=%E6%B0%9B%E5%9B%B4%E6%84%9F%E8%83%B6%E7%89%87%E6%8B%8D%E7%85%A7" },
@@ -22,7 +22,7 @@
       "source": "kesong",
       "sourceName": "可颂",
       "listName": "种草趋势榜",
-      "updatedAt": "2026-06-13T08:00:00.000Z",
+      "updatedAt": "2026-06-14T08:00:00.000Z",
       "items": [
         { "rank": 1, "title": "法式慵懒风穿搭", "heat": "41w", "url": "https://www.kesong.cn/search?q=%E6%B3%95%E5%BC%8F%E6%85%B5%E6%87%92%E9%A3%8E%E7%A9%BF%E6%90%AD" },
         { "rank": 2, "title": "夏日冰饮自制", "heat": "35w", "url": "https://www.kesong.cn/search?q=%E5%A4%8F%E6%97%A5%E5%86%B0%E9%A5%AE%E8%87%AA%E5%88%B6" },
@@ -40,7 +40,7 @@
       "source": "dewu",
       "sourceName": "得物",
       "listName": "种草趋势榜",
-      "updatedAt": "2026-06-13T08:00:00.000Z",
+      "updatedAt": "2026-06-14T08:00:00.000Z",
       "items": [
         { "rank": 1, "title": "复古跑鞋穿搭", "heat": "52w", "url": "https://www.dewu.com/search?keyword=%E5%A4%8D%E5%8F%A4%E8%B7%91%E9%9E%8B%E7%A9%BF%E6%90%AD" },
         { "rank": 2, "title": "夏日防晒好物", "heat": "44w", "url": "https://www.dewu.com/search?keyword=%E5%A4%8F%E6%97%A5%E9%98%B2%E6%99%92%E5%A5%BD%E7%89%A9" },
@@ -54,5 +54,26 @@
         { "rank": 10, "title": "滑板入门装备", "heat": "13w", "url": "https://www.dewu.com/search?keyword=%E6%BB%91%E6%9D%BF%E5%85%A5%E9%97%A8%E8%A3%85%E5%A4%87" }
       ]
     }
-  ]
+  ],
+  "crossPlatform": [
+    {
+      "title": "穿搭",
+      "url": "https://www.xiaohongshu.com/search_result?keyword=%E7%A9%BF%E6%90%AD",
+      "heat": "180.0w",
+      "platforms": ["小红书", "可颂", "得物"]
+    },
+    {
+      "title": "防晒好物",
+      "url": "https://www.dewu.com/search?keyword=%E9%98%B2%E6%99%92%E5%A5%BD%E7%89%A9",
+      "heat": "69.0w",
+      "platforms": ["可颂", "得物"]
+    },
+    {
+      "title": "拍照技巧",
+      "url": "https://www.kesong.cn/search?q=%E6%8B%8D%E7%85%A7%E6%8A%80%E5%B7%A7",
+      "heat": "68.0w",
+      "platforms": ["小红书", "可颂"]
+    }
+  ],
+  "cacheTTL": 600
 }

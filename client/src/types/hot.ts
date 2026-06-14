@@ -16,6 +16,15 @@ export interface HotPlatform {
   error?: boolean
 }
 
+export interface CrossPlatformItem {
+  title: string
+  url: string
+  heat: string
+  platforms: string[]
+}
+
 export interface HotAllResponse {
   platforms: HotPlatform[]
+  crossPlatform: CrossPlatformItem[]
+  cacheTTL: number
 }
