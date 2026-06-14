@@ -1,0 +1,32 @@
+name: Deploy Backend to Railway
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'server/**'
+      - '.github/workflows/railway.yml'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Get Railway Token
+        run: echo "RAILWAY_TOKEN=${{ secrets.RAILWAY_TOKEN }}" >> $GITHUB_ENV
+
+      - name: Deploy to Railway
+        run: |
+          curl -X POST "https://railway.app/api/v1/start" \
+            -H "Authorization: Bearer $RAILWAY_TOKEN" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "service": "${{ vars.RAILWAY_SERVICE_ID }}",
+              "environment": "${{ vars.RAILWAY_ENVIRONMENT_ID }}",
+              "repo": "https://github.com/star280606/mini-hot-hub",
+              "branch": "main",
+              "root": "server"
+            }'
